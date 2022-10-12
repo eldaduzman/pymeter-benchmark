@@ -12,10 +12,13 @@ public class AppTest {
 
         @Test
         public void shouldAnswerWithTrue() throws IOException {
+                int HOW_MANY_THREADS = Integer.parseInt(System.getenv("HOW_MANY_THREADS"));
+                int RAMP_UP = Integer.parseInt(System.getenv("RAMP_UP"));
+                int DURATION = Integer.parseInt(System.getenv("DURATION"));
                 String reportPath = Paths.get("output", "html-report-" + Instant.now().toString().replace(":", "-")).toString();
                 testPlan(
                                 threadGroup()
-                                                .rampToAndHold(10, Duration.ofSeconds(1), Duration.ofSeconds(20))
+                                                .rampToAndHold(HOW_MANY_THREADS, Duration.ofSeconds(RAMP_UP), Duration.ofSeconds(DURATION))
                                                 .children(
                                                                 httpSampler("echo_get_request",
                                                                                 "https://postman-echo.com/get?var=1")
