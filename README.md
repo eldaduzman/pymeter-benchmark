@@ -180,4 +180,76 @@ The final execution flow is to run a python test and then a java test periodical
 - RAMP_UP=10
 - DURATION=600
 
+Each virtual user in the test scripts send a get request to the [postman-echo](https://postman-echo.com/) server every 2000-5000 milliseconds using the [uniform random timer](https://www.blazemeter.com/blog/jmeter-timer)
+
+### Measurements:
+
+In each result folder, there's the file ```statistics.json``` which contains summary information of the test execution.
+An example of such file would be:
+
+```
+{
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 82080,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 178.09485867446304,
+    "medianResTime" : 150.0,
+    "minResTime" : 137.0,
+    "maxResTime" : 1259.0,
+    "pct1ResTime" : 166.0,
+    "pct2ResTime" : 557.9000000000015,
+    "pct3ResTime" : 613.9900000000016,
+    "throughput" : 135.01798759374194,
+    "receivedKBytesPerSec" : 80.38196957571651,
+    "sentKBytesPerSec" : 17.009101952727256
+  },
+  "echo_get_request" : {
+    "transaction" : "echo_get_request",
+    "sampleCount" : 82080,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 178.09485867446304,
+    "medianResTime" : 150.0,
+    "minResTime" : 137.0,
+    "maxResTime" : 1259.0,
+    "pct1ResTime" : 166.0,
+    "pct2ResTime" : 557.9000000000015,
+    "pct3ResTime" : 613.9900000000016,
+    "throughput" : 135.01798759374194,
+    "receivedKBytesPerSec" : 80.38196957571651,
+    "sentKBytesPerSec" : 17.009101952727256
+  }
+}
+```
+
+I took the `total` portion and extracted out of it the following fields:
+
+1. sampleCount - total number of requests sent
+2. throughput - rate of requests per seconds
+3. errorPct - percentage of requests resulted in error
+4. meanResTime - the average of response time.
+
 ### Statistical analysis:
+
+Statistical analysis was conducted in a [jupyter notebook](https://jupyter.org/), visualizations were powered by [plotly](https://plotly.com/), data processing with [pandas](https://pandas.pydata.org/) and the statistical computation were done with [scipy](https://scipy.org/).
+
+For each of the measurements, the effect size was calculated using [Cohen's d](https://statisticsbyjim.com/basics/cohens-d/), statistical significance was calculated using [T test](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html) with confidence interval of 5%.
+
+### Results:
+
+#### sampleCount:
+
+![](images\sampleCount-table.png)
+>>>> sample count table
+>>>>>> p-value indicates statistical insignificance
+
+
+![](images\sampleCount-histogram.png)
+>>>> sample count histogram
+
+
+![](images\sampleCount-box.png)
+>>>> sample count box-plot
+
