@@ -1,5 +1,5 @@
 # pymeter-benchmark
-benchmarking JMeter's java-dsl with python dsl
+[![Generic badge](https://img.shields.io/badge/revision-1.0-blue.svg)](https://shields.io/)
 
 ## File structure
 
@@ -240,16 +240,139 @@ For each of the measurements, the effect size was calculated using [Cohen's d](h
 ### Results:
 
 #### sampleCount:
+<!-- 
+<div style="text-align:center">
+        <img src="images\sampleCount-table.histogram" width="50%" />
+        <img src="images\sampleCount-table.box" width="50%" />
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/> -->
+
 
 ![](images\sampleCount-table.png)
 >>>> sample count table
->>>>>> p-value indicates statistical insignificance
+>>>>>> p-value > 0.05 indicates statistical insignificance
 
+<br/>
+<br/>
+<br/>
+<br/>
 
 ![](images\sampleCount-histogram.png)
 >>>> sample count histogram
+
+<br/>
+<br/>
+<br/>
+<br/>
 
 
 ![](images\sampleCount-box.png)
 >>>> sample count box-plot
 
+<br/>
+<br/>
+<br/>
+<br/>
+
+#### throughput:
+
+![](images\throughput-table.png)
+>>>> throughput count table
+>>>>>> p-value > 0.05 indicates statistical insignificance
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+![](images\throughput-histogram.png)
+>>>> throughput count histogram
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+![](images\throughput-box.png)
+>>>> throughput count box-plot
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+#### errorPct:
+
+![](images\errorPct-table.png)
+>>>> errorPct count table
+>>>>>> p-value > 0.05 indicates statistical insignificance
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+![](images\errorPct-histogram.png)
+>>>> errorPct count histogram
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+![](images\errorPct-box.png)
+>>>> errorPct count box-plot
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+#### meanResTime:
+
+![](images\meanResTime-table.png)
+>>>> meanResTime count table
+>>>>>> p-value > 0.05 indicates statistical insignificance
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+![](images\meanResTime-histogram.png)
+>>>> meanResTime count histogram
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+![](images\meanResTime-box.png)
+>>>> meanResTime count box-plot
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+## Conclusion
+
+In all 4 measurements: sampleCount, throughput, errPct and meanResTime, differences between java runtime and python runtime were statistically insignificant.
+
+This supports the theoretical argument that the JNI bridging provides sound performance and do not hinder pymeters capacity to generate load.
