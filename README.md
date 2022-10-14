@@ -240,70 +240,25 @@ For each of the measurements, the effect size was calculated using [Cohen's d](h
 ### Results:
 
 #### sampleCount:
-<!-- 
-<div style="text-align:center">
-        <img src="images\sampleCount-table.histogram" width="50%" />
-        <img src="images\sampleCount-table.box" width="50%" />
+
+<div style="text-align:left">
+<img src="https://raw.githubusercontent.com/eldaduzman/pymeter-benchmark/main/images/sampleCount-table.png" width="98.35%" />
+<img src="https://raw.githubusercontent.com/eldaduzman/pymeter-benchmark/main/images/sampleCount-histogram.png" width="49%" height="200px" />  <img src="https://raw.githubusercontent.com/eldaduzman/pymeter-benchmark/main/images/sampleCount-box.png" width="49%" height="200px" />
 </div>
 
-<br/>
-<br/>
-<br/>
-<br/> -->
-
-
-![](images\sampleCount-table.png)
->>>> sample count table
 >>>>>> p-value > 0.05 indicates statistical insignificance
-
 <br/>
 <br/>
 <br/>
 <br/>
-
-![](images\sampleCount-histogram.png)
->>>> sample count histogram
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-
-![](images\sampleCount-box.png)
->>>> sample count box-plot
-
-<br/>
-<br/>
-<br/>
-<br/>
-
 #### throughput:
 
-![](images\throughput-table.png)
->>>> throughput count table
+<div style="text-align:left">
+<img src="https://raw.githubusercontent.com/eldaduzman/pymeter-benchmark/main/images/throughput-table.png" width="98.35%" />
+<img src="https://raw.githubusercontent.com/eldaduzman/pymeter-benchmark/main/images/throughput-histogram.png" width="49%" height="200px" />  <img src="https://raw.githubusercontent.com/eldaduzman/pymeter-benchmark/main/images/throughput-box.png" width="49%" height="200px" />
+</div>
+
 >>>>>> p-value > 0.05 indicates statistical insignificance
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-
-![](images\throughput-histogram.png)
->>>> throughput count histogram
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-
-![](images\throughput-box.png)
->>>> throughput count box-plot
-
 <br/>
 <br/>
 <br/>
@@ -311,30 +266,12 @@ For each of the measurements, the effect size was calculated using [Cohen's d](h
 
 #### errorPct:
 
-![](images\errorPct-table.png)
->>>> errorPct count table
+<div style="text-align:left">
+<img src="https://raw.githubusercontent.com/eldaduzman/pymeter-benchmark/main/images/errorPct-table.png" width="98.35%" />
+<img src="https://raw.githubusercontent.com/eldaduzman/pymeter-benchmark/main/images/errorPct-histogram.png" width="49%" height="200px" />  <img src="https://raw.githubusercontent.com/eldaduzman/pymeter-benchmark/main/images/errorPct-box.png" width="49%" height="200px" />
+</div>
+
 >>>>>> p-value > 0.05 indicates statistical insignificance
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-
-![](images\errorPct-histogram.png)
->>>> errorPct count histogram
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-
-![](images\errorPct-box.png)
->>>> errorPct count box-plot
-
 <br/>
 <br/>
 <br/>
@@ -342,34 +279,12 @@ For each of the measurements, the effect size was calculated using [Cohen's d](h
 
 #### meanResTime:
 
-![](images\meanResTime-table.png)
->>>> meanResTime count table
+<div style="text-align:left">
+<img src="https://raw.githubusercontent.com/eldaduzman/pymeter-benchmark/main/images/meanResTime-table.png" width="98.35%" />
+<img src="https://raw.githubusercontent.com/eldaduzman/pymeter-benchmark/main/images/meanResTime-histogram.png" width="49%" height="200px" />  <img src="https://raw.githubusercontent.com/eldaduzman/pymeter-benchmark/main/images/meanResTime-box.png" width="49%" height="200px" />
+</div>
+
 >>>>>> p-value > 0.05 indicates statistical insignificance
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-
-![](images\meanResTime-histogram.png)
->>>> meanResTime count histogram
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-
-![](images\meanResTime-box.png)
->>>> meanResTime count box-plot
-
-<br/>
-<br/>
-<br/>
-<br/>
-
 
 ## Conclusion
 
