@@ -48,7 +48,7 @@ C:.
 ## Abstract
 
 The main goal of this project is to validate the performance of [pymeter](https://github.com/eldaduzman/pymeter).
-More spesifically, it answers the question whether there is any significant performance difference between pymeter and [JMeter-DSL](https://abstracta.github.io/jmeter-java-dsl/)
+More specifically, it answers the question whether there is any significant performance difference between pymeter and [JMeter-DSL](https://abstracta.github.io/jmeter-java-dsl/)
 
 
 For that purpose, I conducted an experiment, in which 2 identical tests cases, one written in JMeter-DSL and the other written in pymeter had been executed repeatedly.
@@ -63,7 +63,7 @@ The original implementation is a gui based tool to script load test scenarios in
 
 For once, upgrading JMeter versions is painful, as it involved manually downloading and deploying executable files.
 This became very clear when [log4j](https://en.wikipedia.org/wiki/Log4Shell) vulnerability was discovered, and software developers needed to instantly upgrade their log4j versions.
-With JMeter, this was even more painful without a proper package management system such as maven or gradel.
+With JMeter, this was even more painful without a proper package management system such as maven or gradle.
 
 Other limitations include difficulty to share code between different projects, using source control management tools such as git or svn.
 It is quite difficult to extend JMeter and it requires a GUI editor which means to use additional development environment instead of using a single IDE for all needs.
@@ -112,10 +112,6 @@ from pymeter.api.samplers import HttpSampler
 from pymeter.api.reporters import HtmlReporter
 from pymeter.api.timers import UniformRandomTimer
 
-
-HOW_MANY_THREADS = int(os.environ.get("HOW_MANY_THREADS", 10))
-RAMP_UP = int(os.environ.get("RAMP_UP", 1))
-DURATION = int(os.environ.get("DURATION", 60))
 
 timer = UniformRandomTimer(2000, 5000)
 html_reporter = HtmlReporter()
@@ -175,7 +171,7 @@ Both scripts save the results in HTML format in a new folder named by the date o
 To keep the results after the docker execution, I mounted the directory  `c:\benchmark` to the outputs directory
 
 
-The final execution flow is to run a python test and then a java test periodically, in total **27** test of each had been executed with the following configurations:
+The final execution flow is to run a python test and then a java test periodically, in total **63** test of each had been executed with the following configurations:
 - HOW_MANY_THREADS=500
 - RAMP_UP=10
 - DURATION=600

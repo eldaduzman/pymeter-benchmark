@@ -5,3 +5,4 @@ jupyter==1.0.0
 scipy==1.9.2
 pre-commit==2.20.0
 nbconvert==7.2.1
+kaleido==0.2.1
