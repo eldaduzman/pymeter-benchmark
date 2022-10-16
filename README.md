@@ -171,7 +171,7 @@ Both scripts save the results in HTML format in a new folder named by the date o
 To keep the results after the docker execution, I mounted the directory  `c:\benchmark` to the outputs directory
 
 
-The final execution flow is to run a python test and then a java test periodically, in total **63** test of each had been executed with the following configurations:
+The final execution flow is to run a python test and then a java test periodically, in total **91** test of each had been executed with the following configurations:
 - HOW_MANY_THREADS=500
 - RAMP_UP=10
 - DURATION=600
@@ -247,6 +247,7 @@ For each of the measurements, the effect size was calculated using [Cohen's d](h
 <br/>
 <br/>
 <br/>
+
 #### throughput:
 
 <div style="text-align:left">
